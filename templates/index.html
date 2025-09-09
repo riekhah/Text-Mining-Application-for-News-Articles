@@ -9,8 +9,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
-            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            background: white;
         }
         
         .container {
@@ -43,13 +44,13 @@
             font-size: 16px;
             border: none;
             border-radius: 6px;
-            background: #007bff;
+            background: pink;
             color: white;
             cursor: pointer;
         }
         
         button:hover {
-            background: #0056b3;
+            background: gray;
         }
         /* Hide all result divs by default */
         
@@ -66,23 +67,62 @@
             margin-top: 0;
             color: #333;
         }
+        
+        header {
+            color: white;
+            justify-content: justify;
+            /* center horizontally */
+            align-items: center;
+            /* center vertically */
+            width: 100%;
+            margin: 0;
+            padding: 5px 0;
+            /* vertical padding */
+            background: linear-gradient(to left, #F0B1B1, #73BD99);
+            display: flex;
+            /
+        }
+        
+        header h1 {
+            margin-left: 15px;
+            color: white;
+            font-size: 27px;
+            font-weight: bold;
+        }
+        /* Form container */
+        
+        form {
+            max-width: 700px;
+            /* limits how wide the form can grow */
+            margin: 30px auto;
+            /* centers the form horizontally */
+            padding: 20px;
+            background: linear-gradient(to bottom, #EDEDED, #FF9696);
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 
 <body>
 
+    <header>
+        <h1>News Analayzer</h1>
+    </header>
+
+
     <form>
         <div class="container">
-            <textarea id="news1" placeholder="Type message here..."></textarea>
-            <textarea id="news2" placeholder="Type message here..."></textarea>
-            <textarea id="news3" placeholder="Type message here..."></textarea>
-            <textarea id="news4" placeholder="Type message here..."></textarea>
-            <textarea id="news5" placeholder="Type message here..."></textarea>
+            <textarea id="News 1" placeholder=" Enter news  here..."></textarea>
+            <textarea id="News 2" placeholder="Enter news here..."></textarea>
+            <textarea id="News 3" placeholder="Enter news here..."></textarea>
+            <textarea id="News 4" placeholder="Enter news here..."></textarea>
+            <textarea id="News 5" placeholder="Enter news here..."></textarea>
         </div>
 
 
         <!-- Dropdown menu -->
-        <label for="task">Choose an option:</label>
+        <label for="task"><b>Choose an option:</b></label>
         <select id="task">
       <option value="classification">Classification</option>
       <option value="sentiment">Sentiment Analysis</option>
@@ -93,7 +133,7 @@
     </select>
 
         <br><br>
-        <button type="button" id="submitBtn">Submit</button>
+        <button type="button" id="submitBtn"><b>Submit</b></button>
     </form>
 
     <!-- Divs for each option -->
